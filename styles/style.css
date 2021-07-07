@@ -209,7 +209,7 @@ nav:first-child a {
 }
 
 .person p {  
-    text-align: justify;
+    text-align: center;
 }
 
 .person:nth-of-type(odd) .photo--cirlce {
