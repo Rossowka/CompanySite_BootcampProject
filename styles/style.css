@@ -16,6 +16,27 @@ a {
     color: inherit;
 }
 
+h1 {
+    letter-spacing: normal;
+    font-size: 36px;
+    line-height: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    letter-spacing: normal;
+}
+
+.padding-T {
+    padding-top: 5%;
+}
+
+.padding-B {
+    padding-bottom: 5%;
+}
+
 .text-white {
     color: #ffffff;
 }
@@ -43,12 +64,20 @@ a {
         flex-direction: row;
         justify-content: space-between;
     }    
+
+    h1 {
+        text-align: left;
+    }
 }
 
 /* COMPUTER SCREEN */
 @media screen and (min-width: 1024px){
     .container {
         width: 960px;
+    }
+
+    h1, h2 {
+        letter-spacing: 2px;
     }
 }
 
@@ -93,5 +122,70 @@ nav:first-child a {
 
     .landing-page h1 {
         width: 60%;
+    }
+}
+
+/* ---- LANDING PAGE ----*/
+
+.landing-page {
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-page h1 {
+    padding-top: 0;
+}
+
+.landing-page_header {
+    text-align: left;
+}
+
+.background-image {
+    height: calc(100vh - var(--bannerHeight));
+    width: 100%;
+    position: relative;
+
+    background-image: url('https://picsum.photos/id/1021/1500/890');
+    background-size: cover;
+    background-color: #6b6b66; 
+}
+
+.background-image::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+#button-offer {
+    background-color: rgba(255, 255, 255,0);
+
+    font-size: 13px;
+    text-align: center;
+    line-height: 2rem;  
+
+    width: 9rem;
+    height: 2rem;
+    border: 3px #ffffff solid;
+}
+
+@media screen and (min-width: 768px){
+    .landing-page h1 {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #button-offer:hover {
+      background-color: #ffffff;
+      color: #000000;
+      transition: ease 1s;
+      cursor: pointer;
     }
 }
