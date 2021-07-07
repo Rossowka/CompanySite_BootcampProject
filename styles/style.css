@@ -1,5 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* ---- UNIVERSAL STYLES ----*/
+
+:root {
+    --bannerHeight: 50px;
+}
+
 html {
     font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.banner-split {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+/* TABLET SCREEN */
+@media screen and (min-width: 768px){
+    .banner-split {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }    
+}
+
+/* COMPUTER SCREEN */
+@media screen and (min-width: 1024px){
+    .container {
+        width: 960px;
+    }
+}
+
+/* ---- NAVIGATION BAR ----*/
+
+header {
+    height: var(--bannerHeight);
+    width: 100%;
+
+    background-color: #4E4E4E;
+}
+
+#menu_links li {
+    display: none;
+}
+
+nav a {
+    display: inline-block;
+    line-height: var(--bannerHeight);;
+    padding: 0 1rem;
+}
+
+nav:first-child a {
+    padding-left: 0;
+}
+
+@media screen and (min-width: 768px){
+    #menu_links li {
+        display: inline;
+    }
+    
+    #menu_links li a {
+        display: inline-block;
+        line-height: var(--bannerHeight);;
+        padding: 0 1rem;
+    }
+    
+    #menu_links li:last-child a {
+        padding-right: 0;
+        cursor: not-allowed;
+    }
+
+    .landing-page h1 {
+        width: 60%;
+    }
 }
