@@ -363,3 +363,31 @@ nav:first-child a {
     left: -5%;
     background-color: #E07A64;
 }
+
+/* ---- FOOTER ----*/
+
+footer {
+    background-color: #4E4E4E;
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer p {
+    padding-bottom: 1rem;
+    line-height: 31px;
+}
+
+@media screen and (min-width: 768px){
+    footer p {
+        padding-bottom: 0;
+    }
+}
+
+.social i {
+    font-size: 31px;
+    padding: 0 9px;
+}
+
+.social li:last-child i {
+    padding-right: 0;
+}
