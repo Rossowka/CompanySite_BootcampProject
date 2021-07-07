@@ -4,6 +4,12 @@
 
 :root {
     --bannerHeight: 50px;
+    --unifiedOutline: 5%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
 html {
@@ -30,11 +36,11 @@ h2 {
 }
 
 .padding-T {
-    padding-top: 5%;
+    padding-top: var(--unifiedOutline);
 }
 
 .padding-B {
-    padding-bottom: 5%;
+    padding-bottom: var(--unifiedOutline);
 }
 
 .text-white {
@@ -188,4 +194,78 @@ nav:first-child a {
       transition: ease 1s;
       cursor: pointer;
     }
+}
+
+/* ---- ABOUT ----*/
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person:first-of-type {
+    padding-top: 0;
+}
+
+.person p {  
+    text-align: justify;
+}
+
+.person:nth-of-type(odd) .photo--cirlce {
+    background-color: #C4C4C4;
+}
+
+.person:nth-of-type(even) .photo--cirlce {
+    background-color: #907D7D;
+}
+
+.photo--cirlce {
+    max-height: 500px;
+    max-width: 500px;
+
+    min-height: 190px;
+    min-width: 190px;
+
+    background-size: cover;
+
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .person {
+        flex-direction: row;
+    }
+
+    .person_description {
+        padding-top: 0;
+    }
+
+    .person:first-of-type {
+        padding-top: var(--unifiedOutline);
+    }
+
+    .person:nth-of-type(odd) p {
+        text-align: left;
+        padding-left: var(--unifiedOutline);
+    }
+    
+    .person:nth-of-type(even) p {
+        text-align: right;
+        padding-right: var(--unifiedOutline);
+    }
+    
+    .person:nth-of-type(even) .photo--cirlce {
+        order: 2;
+    }
+}
+
+/* ---- ABOUT_PHOTOS ----*/
+
+#Malina-Kowalska {
+    background-image: url(https://randomuser.me/api/portraits/women/49.jpg);
+}
+
+#Piotr-Kowalski {
+    background-image: url(https://randomuser.me/api/portraits/men/36.jpg);
 }
